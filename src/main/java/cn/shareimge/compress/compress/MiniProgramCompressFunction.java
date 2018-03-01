@@ -30,7 +30,7 @@ public class MiniProgramCompressFunction<T extends IShareBean> implements Functi
         Log.e(TAG, "压缩图片");
         BitmapUtil bitmapUtil = new BitmapUtil();
         if (originBitmap != null) {
-            byte[] result = bitmapUtil.getImageThumbnail(originBitmap,BitmapUtil.MAX_MINI_THUMBNAIL_DATA_LENGTH);
+            byte[] result = bitmapUtil.getScaledImageBytes(originBitmap,BitmapUtil.MAX_MINI_THUMBNAIL_DATA_LENGTH);
             mShareBean.setWebPageData(result);
         }
         Log.e(TAG, "压缩图片完成");
